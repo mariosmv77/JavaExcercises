@@ -50,4 +50,24 @@ public class CheckLists {
         }
     }
 
+    //Check if a String is symmetric
+    public static void IsSymmetric(String str){
+        boolean flag=true;
+        String strlowercase= str.toLowerCase();
+        List<Character> listofString = new ArrayList<Character>(str.length());
+        for (int i=0; i <str.length();i++){
+            listofString.add(strlowercase.charAt(i));
+        }
+        for (int i=0; i <str.length()/2;i++){
+            if(listofString.get(i) != listofString.get((str.length()-1)-i)){
+                flag=false;
+            }
+        }
+        if (flag) {
+            System.out.println("The string is symmetric");
+        }else{
+            System.out.println("The string is not symmetric");
+        }
+    }
+
     }

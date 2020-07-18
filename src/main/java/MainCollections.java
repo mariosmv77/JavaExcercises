@@ -31,5 +31,8 @@ public class MainCollections {
         //Check my code for print digits o number
         int num = 12345;
         CheckLists.PrintDigitsofNumber(num);
+
+        //Check my code for symmetric string
+        CheckLists.IsSymmetric("Abcba");
     }
 }
