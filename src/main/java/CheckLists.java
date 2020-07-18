@@ -40,9 +40,9 @@ public class CheckLists {
 
     //Reverse a string using only a stack
     public static void ReverseString(String str){
-        int digits= str.length();
-        List<String> listofdigits = RepresentStack.CreateStack(digits);
-        for (int i=0; i<=listofdigits.size()-1;i++) {
+        //int digits= str.length();
+        List<String> listofdigits = RepresentStack.CreateStack(str.length());
+        for (int i=0; i<str.length();i++) {
             RepresentStack.PushInStack(str.charAt(i), listofdigits);
         }
         for(int i= listofdigits.size()-1; i>=0 ;i--){

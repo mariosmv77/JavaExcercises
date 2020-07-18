@@ -28,16 +28,8 @@ public class MainCollections {
             System.out.println(numbers1.get(i));
         }
 
+        //Check my code for print digits o number
         int num = 12345;
         CheckLists.PrintDigitsofNumber(num);
-
-        //Check represent of stack
-        List<Integer> stack =RepresentStack.CreateStack(10);
-        //RepresentStack.PushInStack(45,stack);
-        RepresentStack.PopInStack(stack);
-        RepresentStack.PeakInStack(stack);
-
-        //Reverse a string using only a stack
-        CheckLists.ReverseString("marios");
     }
 }
