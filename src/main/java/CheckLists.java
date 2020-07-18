@@ -25,49 +25,49 @@ public class CheckLists {
     }
 
     // Return Digits of Number
-    public static void PrintDigitsofNumber(int n){
+    public static void PrintDigitsofNumber(int n) {
         List<Integer> digits = new ArrayList<Integer>();
-        int rev_num=0;
-        while(n!=0) {
+        int rev_num = 0;
+        while (n != 0) {
             rev_num = n % 10;
             n = n / 10;
             digits.add(rev_num);
         }
-        for (int i=digits.size()-1; i>=0 ; i--){
+        for (int i = digits.size() - 1; i >= 0; i--) {
             System.out.println(digits.get(i));
         }
     }
 
     //Reverse a string using only a stack
-    public static void ReverseString(String str){
+    public static void ReverseString(String str) {
         //int digits= str.length();
         List<String> listofdigits = RepresentStack.CreateStack(str.length());
-        for (int i=0; i<str.length();i++) {
+        for (int i = 0; i < str.length(); i++) {
             RepresentStack.PushInStack(str.charAt(i), listofdigits);
         }
-        for(int i= listofdigits.size()-1; i>=0 ;i--){
+        for (int i = listofdigits.size() - 1; i >= 0; i--) {
             RepresentStack.PopInStack(listofdigits);
         }
     }
 
     //Check if a String is symmetric
-    public static void IsSymmetric(String str){
-        boolean flag=true;
-        String strlowercase= str.toLowerCase();
+    public static void IsSymmetric(String str) {
+        boolean flag = true;
+        String strlowercase = str.toLowerCase();
         List<Character> listofString = new ArrayList<Character>(str.length());
-        for (int i=0; i <str.length();i++){
+        for (int i = 0; i < str.length(); i++) {
             listofString.add(strlowercase.charAt(i));
         }
-        for (int i=0; i <str.length()/2;i++){
-            if(listofString.get(i) != listofString.get((str.length()-1)-i)){
-                flag=false;
+        for (int i = 0; i < str.length() / 2; i++) {
+            if (listofString.get(i) != listofString.get((str.length() - 1) - i)) {
+                flag = false;
             }
         }
         if (flag) {
             System.out.println("The string is symmetric");
-        }else{
+        } else {
             System.out.println("The string is not symmetric");
         }
     }
 
-    }
+}

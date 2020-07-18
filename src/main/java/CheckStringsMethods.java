@@ -40,20 +40,20 @@ public class CheckStringsMethods {
         if (CheckUpperCase(x)) sum++;
         if (CheckWhitespace(x)) sum++;
         if (CheckExistofSymbols(x)) sum++;
-        if(CheckNumberofCharacters(x)) sum++;
+        if (CheckNumberofCharacters(x)) sum++;
         return sum;
     }
 
     public static void CheckPassword(String x) {
         if (CheckPasswordRequirements(x) >= 3) {
-            if (CheckPasswordRequirements(x) == 6){
+            if (CheckPasswordRequirements(x) == 6) {
                 System.out.println("Very Strong Password");
-            }else if (CheckNumberofCharacters(x)) {
+            } else if (CheckNumberofCharacters(x)) {
                 if ((CheckExistofNumbers(x) && CheckWhitespace(x)) || (CheckExistofSymbols(x) && CheckWhitespace(x))) {
                     System.out.println("Password OK, Strong Password");
                 }
             }
-            }else{
+        } else {
             System.out.println("Invalid Password");
             System.out.println("Password Requirements: \n1.Password contains at least one uppercase character \n" +
                     "2. Password contains at least one lowercase character \n"

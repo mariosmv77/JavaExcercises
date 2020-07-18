@@ -46,17 +46,17 @@ public class CalculateMethods {
     }
 
     //Calculate the digits of a long number
-    public static int CalculateDigits(long x){
-        int numberofdigits =0;
-        while(x != 0){
-            x = x/10;
+    public static int CalculateDigits(long x) {
+        int numberofdigits = 0;
+        while (x != 0) {
+            x = x / 10;
             numberofdigits++;
         }
         return numberofdigits;
     }
 
     //Calculate the demical part of a number
-    public static float GiveDemicalPart(float number){
+    public static float GiveDemicalPart(float number) {
         BigDecimal floatNumber = new BigDecimal(String.valueOf(number));
         BigDecimal integerNumber = new BigDecimal(floatNumber.intValue());
         return floatNumber.subtract(integerNumber).floatValue();
