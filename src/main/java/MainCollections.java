@@ -4,6 +4,7 @@ import java.util.List;
 public class MainCollections {
     public static void main(String[] args) {
 
+        //Check my code about List with only primes
         List<Integer> numbers = new ArrayList<Integer>();
         for(int i=0; i<=20;i++){
             numbers.add(i);
@@ -30,5 +31,10 @@ public class MainCollections {
         int num = 12345;
         CheckLists.PrintDigitsofNumber(num);
 
+        //Check represent of stack
+        List<Integer> stack =RepresentStack.CreateStack(10);
+        RepresentStack.PushInStack(45,stack);
+        RepresentStack.PopInStack(stack);
+        RepresentStack.PeakInStack(stack);
     }
 }
