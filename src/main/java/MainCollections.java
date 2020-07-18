@@ -33,8 +33,11 @@ public class MainCollections {
 
         //Check represent of stack
         List<Integer> stack =RepresentStack.CreateStack(10);
-        RepresentStack.PushInStack(45,stack);
+        //RepresentStack.PushInStack(45,stack);
         RepresentStack.PopInStack(stack);
         RepresentStack.PeakInStack(stack);
+
+        //Reverse a string using only a stack
+        CheckLists.ReverseString("marios");
     }
 }
