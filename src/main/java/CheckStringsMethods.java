@@ -29,8 +29,9 @@ public class CheckStringsMethods {
         return x.length() >= 8;
     }
 
-    public static boolean CheckWhitespace(String x) {
-        return !x.matches("\\S+");
+    public static boolean CheckSequence(String x) {
+        return !x.matches("[a-z]{2,}|[A-Z]{2,}|\\d{2,}");
+
     }
 
     public static int CheckPasswordRequirements(String x) {
@@ -38,7 +39,7 @@ public class CheckStringsMethods {
         if (CheckExistofNumbers(x)) sum++;
         if (CheckLowerCase(x)) sum++;
         if (CheckUpperCase(x)) sum++;
-        if (CheckWhitespace(x)) sum++;
+        if (CheckSequence(x)) sum++;
         if (CheckExistofSymbols(x)) sum++;
         if (CheckNumberofCharacters(x)) sum++;
         return sum;
@@ -49,7 +50,7 @@ public class CheckStringsMethods {
             if (CheckPasswordRequirements(x) == 6) {
                 System.out.println("Very Strong Password");
             } else if (CheckNumberofCharacters(x)) {
-                if ((CheckExistofNumbers(x) && CheckWhitespace(x)) || (CheckExistofSymbols(x) && CheckWhitespace(x))) {
+                if ((CheckExistofNumbers(x) && CheckSequence(x)) || (CheckExistofSymbols(x) && CheckSequence(x))) {
                     System.out.println("Password OK, Strong Password");
                 }
             }
