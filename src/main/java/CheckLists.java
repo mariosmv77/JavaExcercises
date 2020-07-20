@@ -73,8 +73,10 @@ public class CheckLists {
         BigInteger bigNumber = new BigInteger(String.valueOf(x));
         BigInteger bigNumber1 = new BigInteger(String.valueOf(y));
         BigInteger num= bigNumber.add(bigNumber1);
-       // System.out.println(num);
+        // To see clear the result
+        System.out.println(num);
 
+        //Try to depict with ArrayList
         BigInteger ten = new BigInteger("10");
 
         List<Integer> hugenumber = new ArrayList<Integer>();
@@ -86,18 +88,10 @@ public class CheckLists {
         }
         Collections.reverse(hugenumber);
         System.out.println(hugenumber);
+
         for(int i =0; i< hugenumber.size();i++){
-              System.out.println(hugenumber.get(i));
+              System.out.println(hugenumber.get(i) +"\r");
         }
     }
-
-//    //Second way
-//    public static void AddBigNumbers(long x, long y){
-//        String a,b;
-//        String c[] = new String[50];
-//        String d[] = new String[50];
-//        a =Long.toString(x);
-//        b =Long.toString(y);
-//        }
 
 }
