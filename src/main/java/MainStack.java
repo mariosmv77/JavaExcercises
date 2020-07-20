@@ -9,6 +9,7 @@ public class MainStack {
         RepresentStack.PopInStack(stack);
         RepresentStack.PeakInStack(stack);
 
+        //---------------------------------------------------
         //Reverse a string using only a stack
         CheckLists.ReverseString("MARIOS");
     }

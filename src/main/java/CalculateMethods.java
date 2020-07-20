@@ -12,7 +12,7 @@ public class CalculateMethods {
     }
 
     //Max int can calculate the var int
-    public static int calcMaximum(int n) {
+    public static int calcMaximum() {
         int max = Integer.MAX_VALUE; // 2 eis tin 31 meion 1
         System.out.println(max);
         System.out.println(max + 1);
@@ -37,6 +37,7 @@ public class CalculateMethods {
         return flag;
     }
 
+    //Calculate Harmonic sum
     public static double harmonicSum(int n) {
         double returnValue = 0;
         for (int i = 1; i <= n; i++) {
