@@ -15,6 +15,7 @@ public class MainCollections {
             System.out.println(numbers.get(i));
         }
 
+        //---------------------------------------------------
         // Check my code about duplicates
         List<Integer> numbers1 = new ArrayList<Integer>();
         for (int i = 0; i <= 20; i++) {
@@ -28,11 +29,17 @@ public class MainCollections {
             System.out.println(numbers1.get(i));
         }
 
+        //---------------------------------------------------
         //Check my code for print digits o number
         int num = 12345;
         CheckLists.PrintDigitsofNumber(num);
 
+        //---------------------------------------------------
         //Check my code for symmetric string
         CheckLists.IsSymmetric("Abcba");
+
+        //---------------------------------------------------
+        //Check my code for Add bigNumbers
+        CheckLists.AddBigNumbers(2000000000,2000000000);
     }
 }

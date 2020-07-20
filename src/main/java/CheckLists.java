@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.math.BigInteger;
+import java.util.*;
 
 public class CheckLists {
 
@@ -69,5 +67,37 @@ public class CheckLists {
             System.out.println("The string is not symmetric");
         }
     }
+
+    //Add fuctionality for big numbers (Not working, my first try)
+    public static void AddBigNumbers(long x, long y) {
+        BigInteger bigNumber = new BigInteger(String.valueOf(x));
+        BigInteger bigNumber1 = new BigInteger(String.valueOf(y));
+        BigInteger num= bigNumber.add(bigNumber1);
+       // System.out.println(num);
+
+        BigInteger ten = new BigInteger("10");
+
+        List<Integer> hugenumber = new ArrayList<Integer>();
+        while (num.intValue()!=0) {
+            BigInteger rev_num = num.mod(ten);
+            int a = rev_num.intValue();
+            num = num.divide(ten);
+            hugenumber.add(a);
+        }
+        Collections.reverse(hugenumber);
+        System.out.println(hugenumber);
+        for(int i =0; i< hugenumber.size();i++){
+              System.out.println(hugenumber.get(i));
+        }
+    }
+
+//    //Second way
+//    public static void AddBigNumbers(long x, long y){
+//        String a,b;
+//        String c[] = new String[50];
+//        String d[] = new String[50];
+//        a =Long.toString(x);
+//        b =Long.toString(y);
+//        }
 
 }
