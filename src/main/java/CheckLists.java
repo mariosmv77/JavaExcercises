@@ -89,9 +89,12 @@ public class CheckLists {
         Collections.reverse(hugenumber);
         System.out.println(hugenumber);
 
+        String outcome = "";
         for(int i =0; i< hugenumber.size();i++){
-              System.out.println(hugenumber.get(i) +"\r");
+                outcome +=hugenumber.get(i);
+              System.out.println(hugenumber.get(i) );
         }
+        System.out.println(outcome);
     }
 
 }
